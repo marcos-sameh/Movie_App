@@ -1,0 +1,158 @@
+body{
+    background-color: #0d0d0d;
+    color: #f6f6f6;
+}
+.logo{
+    width: 25px;
+}
+i{
+    cursor: pointer;
+}
+.nav-tap{
+    background-color: #0d0d0d;
+
+}
+.side-nav-bar{
+    z-index: 99;
+}
+.movie{
+    min-height: 500px;
+}
+ul li{
+    cursor: pointer;
+}
+.movie-layer {
+    top: 0;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: #000000b7;
+    padding: 10px 5px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    overflow: hidden;
+  
+ 
+     
+}
+ 
+.movie img {
+    transition: all 1s ease-in-out;
+}
+.movie:hover img {
+     transform: rotateZ(10deg) scale(1.3);
+}
+.movie:hover .movie-layer {
+     opacity: 1;
+}
+
+#movie-rate-number{
+    width: 30px;
+    height: 30px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid green;
+    border-radius: 50%;
+}
+.movie-layer-second {
+    height: 100%;
+}
+.movie-layer-second h3
+{
+position: absolute;
+top: -50px;
+left: 0%;
+transition: top 1s ease-in-out;
+}
+.movie:hover .movie-layer-second h3 {
+    top: 0;
+}
+.movie-layer-second #movie-dscription
+{
+position: absolute;
+ top: 75px;
+left: 0%;
+
+transition: all .5s ease-in-out;
+}
+.movie:hover .movie-layer-second  #movie-dscription {
+    top: 75px;
+ 
+   
+   animation: rotate .5s ease-in-out ;
+}
+
+@keyframes rotate{
+ 
+0%{transform: rotateX(-25deg);}
+25%{transform: rotateX(0deg);}
+50%{transform: rotateX(-25deg);}
+75%{transform: rotateX(0deg);}
+100%{transform: rotateX(-25deg);}
+
+ 
+
+
+
+}
+
+.movie-layer-second #movie-span
+{
+position: absolute;
+ bottom: -50px;
+left: 0%;
+
+transition: all .5s ease-in-out;
+}
+.movie:hover .movie-layer-second   #movie-span {
+ bottom: 100px;
+    
+}
+ 
+.movie-layer-second #movie-rate
+{
+position: absolute;
+left: 0% ;
+ bottom: -50px;
+transition: all .7s ease-in-out;
+}
+.movie:hover .movie-layer-second   #movie-rate {
+ bottom: 80px;
+    
+}
+.movie-layer-second #movie-rate-number
+{
+position: absolute;
+bottom: -50px;
+left: 0%;
+transition:all .9s ease-in-out;
+}
+.movie:hover .movie-layer-second   #movie-rate-number {
+    bottom: 40px;
+}
+
+ i.fa-star, .fa-star-half-stroke{
+    color: gold;
+ }
+ .up{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #0d0d0d;
+    color: white;
+    border: 1px solid white;
+ 
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    /* opacity: ; */
+ }
+ /* .up:hover{
+    scroll-behavior: smooth ;
+ } */

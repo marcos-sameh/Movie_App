@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" type="image/x-icon" href="../images/logo.png">
+
+    <title>Movie App</title>
+</head>
+<body>
+
+    <div class="side-nav-bar h-100 position-fixed d-flex">
+        <div class="nav-tap d-flex flex-column justify-content-between h-100 p-4">
+            <div class="nav-links">
+
+                <ul class="list-unstyled overflow-hidden ">
+                    <li onclick="getMovies('now_playing')" class="py-2 position-relative" >Now Playing</li>
+                    <li onclick="getMovies('popular')" class="py-2 position-relative" >Popular</li>
+                    <li onclick="getMovies('top_rated')" class="py-2 position-relative" >Top Rated</li>
+                    <li onclick="getTrending()" class="py-2 position-relative" >Trending</li>
+                    <li onclick="getMovies('upcoming')" class="py-2 position-relative" >Upcoming</li>
+                    <li  class="py-2 position-relative" >Contact Us</li>
+                </ul>
+            </div>
+            <div class="nav-footer"> 
+                <div class="icons">
+                   <i class="fa-brands fa-facebook"></i> 
+                   <i class="fa-brands fa-twitter"></i> 
+                   <i class="fa-solid fa-globe"></i> 
+                </div>
+                <div class="footer">
+                    <p>Coyprighter A@ 2019 All Rights
+                        <br> Reserved
+                    </p>
+                </div>
+
+            </div>
+        </div>
+        <div class="nav-header d-flex flex-column justify-content-between py-4   px-2 text-center bg-white text-black">
+            <img src="../images/logo.png" class="logo " alt="">
+            <i class="open-colse-icon fa-solid  fa-bars fa-align-justify fa-2xl d-block"  ></i>  
+            <i class="fa-solid open-colse-icon fa-xmark fa-2xl d-none" id=""></i>                
+
+ 
+            <div class="">
+                 <i class="fa-solid fa-globe d-block"></i> 
+                <i class="fa-solid fa-share-nodes"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="container w-75 pt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <input type="text" id="scearchBar" class="form-control bg-transparent text-white rounded-pill p-2" placeholder="Search By Name">
+            </div>
+        </div>
+    </div>
+  
+    <div class="container py-5" id="contact">
+        <div class="row g-5" id="showMovies">
+           
+        </div>
+    </div>
+
+<div class="contact min-vh-100 d-flex justify-content-center align-items-center">
+    <div class="container py-5 ">
+        <h2 class="pb-4">Contact Us</h2>
+        <div class="row g-4 ">
+            <div class="col-md-6">
+ 
+                <input type="text" onkeyup="inputsValidation()" id="nameInput" class="form-control bg-transparent  border-1" placeholder="Enter Your Name">
+            </div>
+            <div class="col-md-6">
+                <input type="email" onkeyup="inputsValidation()" id="emailInput" class="form-control bg-transparent  border-1" placeholder="Enter Your Email">
+            </div>
+            <div class="col-md-6">
+                <input type="text" onkeyup="inputsValidation()" id="phoneInput" class="form-control bg-transparent  " placeholder="Enter Your Phone ">
+            </div>
+            <div class="col-md-6">
+                <input type="number" onkeyup="inputsValidation()" id="ageInput" class="form-control bg-transparent" placeholder="Enter Your Age ">
+            </div>
+            <div class="col-md-6">
+                <input type="password" onkeyup="inputsValidation()" id="passworedInput" class="form-control bg-transparent " placeholder="Enter Your password ">
+            </div>
+            <div class="col-md-6">
+                <input type="password" onkeyup="inputsValidation()" id="rePassworedInput" class="form-control bg-transparent " placeholder="ReEnter password ">
+            </div>
+
+             
+        </div>
+
+        <button type="button" id="submitBtn" disabled class="btn btn-warning mt-4">Submit</button>
+    </div>
+</div>
+    
+<span id="btnUp" class="up active"><i class="fa-solid fa-arrow-up"></i></span>
+     <script src="../js/code.jquery.com_jquery-3.7.0.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+     <script src="../js/index.js"></script>
+
+</body>
+</html>
