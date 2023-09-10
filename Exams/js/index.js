@@ -208,36 +208,54 @@ function rePasswordValidation() {
   return result ;
 }
 
-$(window).scroll(function () {
-  if($(this).scrollTop() > 80 )  {
-    $('#btnUp').fadeIn();
-  }else{
-    $('#btnUp').fadeOut();
+// $(window).scroll(function () {
+//   if($(this).scrollTop() > 80 )  {
+//     $('#btnUp').fadeIn();
+//   }else{
+//     $('#btnUp').fadeOut();
 
-  }
+//   }
   
-})
+// })
+// $('#btnUp').click(function() {
+//   $('body,html').animate({scrollTop : 0},1000);
+// })
+
+// $(window).scroll(function () {
+//   let windowScroll = $(window).scrollTop();
+
+//   $(window).offset().top
+//   let sectionOffset = $("#contact").offset().top;
+
+    
+//   if (windowScroll > sectionOffset - 70 ) {
+  
+//     $("#btnUp").removeClass("d-none");
+
+//     $("#btnUp").addClass("d-block");
+
+//   } else {
+    
+//     $("#btnUp").removeClass("d-block");
+//     $("#btnUp").addClass("d-none");
+
+//   }
+// });
 $('#btnUp').click(function() {
-  $('body,html').animate({scrollTop : 0},1000);
+  window.scrollTo({
+    top : 0,
+     behavior :'smooth'
+  });
 })
 
-$(window).scroll(function () {
-  let windowScroll = $(window).scrollTop();
+let UP =document.getElementById("btnUp");
+window.onscroll = function() {
+  console.log();
+  if (this.scrollY >= 1000) {
 
-  $(window).offset().top
-  let sectionOffset = $("#contact").offset().top;
-
-    
-  if (windowScroll > sectionOffset - 70 ) {
-  
-    $("#btnUp").removeClass("d-none");
-
-    $("#btnUp").addClass("d-block");
-
-  } else {
-    
-    $("#btnUp").removeClass("d-block");
-    $("#btnUp").addClass("d-none");
+    UP.classList.add("show")
+  }else{
+    UP.classList.remove("show")
 
   }
-});
+}
