@@ -151,8 +151,9 @@ transition:all .9s ease-in-out;
     align-items: center;
     justify-content: center;
     font-size: 22px;
-    /* opacity: ; */
+    opacity: 0;
+    transition: opacity .5s ease-in-out;
  }
- /* .up:hover{
-    scroll-behavior: smooth ;
- } */
+.show{
+    opacity: 1;
+}
